@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="custom.xsl"?>
+<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
+<TEI xmlns="http://www.w3.org/1999/xhtml" tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" id="id1">
+  <teiHeader id="id2">
+    <fileDesc id="id3">
+      <titleStmt id="id4">
+        <tei-title id="id5"></tei-title>
+      </titleStmt>
+      <publicationStmt id="id6">
+        <publisher id="id7"></publisher>
+      </publicationStmt>
+      <sourceDesc default="false" id="id8">
+        <bibl default="false" status="draft" id="id9"></bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text xml="http://www.w3.org/XML/1998/namespace" id="id10">
+    <front id="id11"></front>
+    <body xmlns="http://www.tei-c.org/ns/1.0" lang="">
+      <head xmlns="http://www.w3.org/1999/xhtml" id="id12">Aa</head>
+      <div xmlns="http://www.w3.org/1999/xhtml" part="N" org="uniform" sample="complete" id="id13">
+        <index id="id14"></index>
+        <entry id="id15" xml:lang="en" type="main">
+          <def opt="false" id="id16"></def>
+          <etym opt="false" id="id17"></etym>
+          <form opt="false" id="id18">
+            <orth opt="false" id="id19">aardvark</orth>
+            <pron opt="false" id="id20"></pron>
+            <pos opt="false" id="id21"></pos>
+            <gloss id="id22">only one ~</gloss>
+            <usg opt="false" id="id23"></usg>
+          </form>
+          <sense opt="false" id="id24"></sense>
+        </entry>
+        <entry id="id25" xml:lang="en" type="main">
+          <def opt="false" id="id26"></def>
+          <etym opt="false" id="id27"></etym>
+          <form opt="false" id="id28">
+            <orth opt="false" id="id29">aardvarks</orth>
+            <pron opt="false" id="id30"></pron>
+            <pos opt="false" id="id31"></pos>
+            <gloss id="id32">a bunch of varks</gloss>
+            <usg opt="false" id="id33"></usg>
+          </form>
+          <sense opt="false" id="id34"></sense>
+        </entry>
+        <entry id="id35" xml:lang="en" type="main">
+          <def opt="false" id="id36"></def>
+          <etym opt="false" id="id37"></etym>
+          <form opt="false" id="id38">
+            <orth opt="false" id="id39">aback</orth>
+            <pron opt="false" id="id40"></pron>
+            <pos opt="false" id="id41"></pos>
+            <gloss id="id42">I was taken ~</gloss>
+            <usg opt="false" id="id43"></usg>
+          </form>
+          <sense opt="false" id="id44"></sense>
+        </entry>
+        <entry id="id45" xml:lang="en" type="main">
+          <def opt="false" id="id46"></def>
+          <etym opt="false" id="id47"></etym>
+          <form opt="false" id="id48">
+            <orth opt="false" id="id49">abacus</orth>
+            <pron opt="false" id="id50"></pron>
+            <pos opt="false" id="id51"></pos>
+            <gloss id="id52">lucky it's only one cus</gloss>
+            <usg opt="false" id="id53"></usg>
+          </form>
+          <sense opt="false" id="id54"></sense>
+        </entry>
+        <entry id="id55" xml:lang="en" type="main">
+          <def opt="false" id="id56"></def>
+          <etym opt="false" id="id57"></etym>
+          <form opt="false" id="id58">
+            <orth opt="false" id="id59">abacuses</orth>
+            <pron opt="false" id="id60"></pron>
+            <pos opt="false" id="id61"></pos>
+            <gloss id="id62">a bunch of cusses</gloss>
+            <usg opt="false" id="id63"></usg>
+          </form>
+          <sense opt="false" id="id64"></sense>
+        </entry>
+      </div>
+    </body>
+    <back id="id65"></back>
+  </text>
+</TEI>

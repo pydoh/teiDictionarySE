@@ -1,0 +1,35 @@
+body{
+    background: #202020;
+    color: white;
+    display: flex;
+    width: 90%;
+    height: 90%;
+    place-items: left;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.button-container{
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+#editor{
+    background-color: #3e3e3e;
+    color: white;
+
+}
+button{
+    padding: 10px;
+    color: white;
+    background-color: rgb(10, 185, 164);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: rgb(7, 220, 195);
+}

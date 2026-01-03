@@ -1,0 +1,17 @@
+{
+    "name": "teiDictionary SE",
+    "version": "1.0.0",
+    "description": "TEI-P5 Dictionary Simple Edit",
+    "main": "main.js",
+    "private": true,
+    "scripts": {
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "kmetzker",
+    "license": "MIT",
+    "contributors": [],
+    "devDependencies": {
+        "electron": "^39.2.7"
+    }
+}
