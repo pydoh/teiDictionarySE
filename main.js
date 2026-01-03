@@ -3,10 +3,6 @@ const fs = require("fs");
 const url = require('url')
 const path = require("path");
 
-//import * as  fs from 'fs';
-//import * as  url from 'url';
-//import * as  path from 'path';
-
 // Import required Electron modules
 const {
     app,
@@ -17,21 +13,15 @@ const {
     MessageChannelMain
     } = require('electron')
 
+// Import required application modules/methods
 const { readData, writeData } = require('./js/fileutils.js');
 //const { checkCollision } = require('./js/idutils.js');
-//import { readData, writeData } from './js/fileutils.js';
-
-//const { createMenu } = require("./js/mainmenu.js"); // The most explicit form
-//const { displayMenu } = require("./js/mainmenu.js"); // The most explicit form
-//const { mainmenu } = require("./js/mainmenu.js");
-
-//module.exports = get_full_name;
 
 // Only pass in a valid defaultPath
 const userDocPath = app.getPath('documents');
 const parentDirectoryPath = path.join(userDocPath, 'TEI_Dictionaries');
 const defaultpath = parentDirectoryPath
-//const prj_Name = 'Test_lang';
+const prj_Name = 'Test_lang';
 
 //const defaultpath = path.join(__dirname, 'data')
 
@@ -168,7 +158,6 @@ class createMenu {
               label: "Open",
               accelerator: "Ctrl+O",
               click: () => {
-//                readData(defaultpath, mainWindow);
                 readData(defaultpath, prj_Name, mainWindow);
               },
               enabled: true
