@@ -11,5 +11,5 @@ teiDictionary SE is intended to be a
 simple editor for TEI-P5 dictionary 
 files.
 
-Built with Javascript, Electron and TEI-Boilerplate. teiDictionary SE 
+Built with Javascript, Electron and TEI-Boilerplate (TEI-Boilerplate is licensed under the Creative Commons Attribution 3.0). teiDictionary SE 
 is functional enough to show 'proof of concept.'
