@@ -58,10 +58,6 @@
 
        <xsl:template name="addID">
 	 <xsl:if test="not(ancestor::eg:egXML)">
-	       <xsl:if test="not(@xml:id)">
-<!--		 <xsl:call-template name="generate-unique-id">-->
-<!--		   <xsl:with-param name="root" select="generate-id()"/>-->
-<!--		 </xsl:call-template>-->
 	   <xsl:attribute name="xml:id">
 	     <xsl:choose>
 	       <xsl:when test="@xml:id">
@@ -74,7 +70,6 @@
 	       </xsl:otherwise>
 	     </xsl:choose>
 	   </xsl:attribute>
-	       </xsl:if>
 	 </xsl:if>
        </xsl:template>
 
