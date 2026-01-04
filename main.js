@@ -116,8 +116,8 @@ app.whenReady().then(async () => {
     xml_content = entrystring.replaceAll('&lt;', '<'); // &lt; = <
     xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
     headerFirst = '<?xml version="1.0" encoding="UTF-8"?>\n';
-//    headerOldSecond = '<?xml-stylesheet type="text/xsl" href="custom.xsl"?>\n';
-    headerSecond = '<?xml-stylesheet type="text/xsl" href="../xsl/custom.xsl"?>\n';
+    headerSecond = '<?xml-stylesheet type="text/xsl" href="custom.xsl"?>\n';
+//    headerSecond = '<?xml-stylesheet type="text/xsl" href="../xsl/custom.xsl"?>\n';
     headerThird = '<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">\n';
 
     if ( !(xml_content.includes(headerSecond)) ) {
