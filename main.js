@@ -18,12 +18,12 @@ const { readData, writeData } = require('./js/fileutils.js');
 //const { checkCollision } = require('./js/idutils.js');
 
 // Only pass in a valid defaultPath
-const userDocPath = app.getPath('documents');
-const parentDirectoryPath = path.join(userDocPath, 'TEI_Dictionaries');
-const defaultpath = parentDirectoryPath
+//const userDocPath = app.getPath('documents');
+//const parentDirectoryPath = path.join(userDocPath, 'TEI_Dictionaries');
+//const defaultpath = parentDirectoryPath
 const prj_Name = 'Test_lang';
 
-//const defaultpath = path.join(__dirname, 'data')
+const defaultpath = path.join(__dirname, 'data')
 
 let mainWindow
 
