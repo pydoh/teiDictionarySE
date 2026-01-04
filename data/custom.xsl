@@ -44,6 +44,53 @@
 	 </html>
 </xsl:template>
 
+       <xsl:template match="@xml:id">
+	 <!-- @xml:id is copied to @id, which browsers can use
+	      for internal links.
+	 -->
+	     <xsl:attribute name="xml:id">
+	     <xsl:value-of select="."/>
+	     </xsl:attribute>
+<!--    	 <xsl:attribute name="id">-->
+<!--    	   <xsl:value-of select="."/>-->
+<!--    	 </xsl:attribute>-->
+       </xsl:template>
+
+       <xsl:template name="addID">
+	 <xsl:if test="not(ancestor::eg:egXML)">
+	   <xsl:attribute name="id">
+	     <xsl:choose>
+	       <xsl:when test="@xml:id">
+		 <xsl:value-of select="@xml:id"/>
+	       </xsl:when>
+	       <xsl:otherwise>
+		 <xsl:call-template name="generate-unique-id">
+		   <xsl:with-param name="root" select="generate-id()"/>
+		 </xsl:call-template>
+	       </xsl:otherwise>
+	     </xsl:choose>
+	   </xsl:attribute>
+	 </xsl:if>
+       </xsl:template>
+
+       <!-- support for rtl-languages such as Arabic -->
+       <!-- template to add the HTML @lang attribute based on the containing element -->
+       <xsl:template name="templHtmlAttrLang">
+         <xsl:param name="pInput"/>
+         <xsl:choose>
+           <xsl:when test="$pInput/@xml:lang">
+             <xsl:attribute name="xml:lang">
+               <xsl:value-of select="$pInput/@xml:lang"/>
+             </xsl:attribute>
+           </xsl:when>
+           <xsl:otherwise>
+             <xsl:attribute name="xml:lang">
+               <xsl:value-of select="ancestor::node()[@xml:lang!=''][1]/@xml:lang"/>
+             </xsl:attribute>
+           </xsl:otherwise>
+         </xsl:choose>
+       </xsl:template>
+
   <xsl:param name="includeToolbox" select="false()"/>
 
 
