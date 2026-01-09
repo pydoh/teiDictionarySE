@@ -2,6 +2,7 @@
 const fs = require("fs");
 const url = require('url')
 const path = require("path");
+//const { randomUUID } = require('crypto');
 
 // Import required Electron modules
 const {
@@ -15,7 +16,7 @@ const {
 
 // Import required application modules/methods
 const { readData, writeData } = require('./js/fileutils.js');
-//const { checkCollision } = require('./js/idutils.js');
+const { getSnowflake } = require('./js/idutils.js');
 
 // Only pass in a valid defaultPath
 //const userDocPath = app.getPath('documents');
@@ -109,6 +110,7 @@ app.whenReady().then(async () => {
   const saveport1 = getSavePorts(mainWindow);
   const mainmenu = Menu.buildFromTemplate(new createMenu(saveport1));
   Menu.setApplicationMenu(mainmenu);
+  getSnowflake();
 
   // Fixme 'saveport1 Closed!' on new page load
   saveport1.on('message', (event) => {
@@ -116,8 +118,8 @@ app.whenReady().then(async () => {
     xml_content = entrystring.replaceAll('&lt;', '<'); // &lt; = <
     xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
     headerFirst = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    headerSecond = '<?xml-stylesheet type="text/xsl" href="custom.xsl"?>\n';
-//    headerSecond = '<?xml-stylesheet type="text/xsl" href="../xsl/custom.xsl"?>\n';
+//    headerSecond = '<?xml-stylesheet type="text/xsl" href="custom.xsl"?>\n';
+    headerSecond = '<?xml-stylesheet type="text/xsl" href="../xsl/custom.xsl"?>\n';
     headerThird = '<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">\n';
 
     if ( !(xml_content.includes(headerSecond)) ) {
