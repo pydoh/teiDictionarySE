@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 // Handle messages received on port1
 function elemClick(e) {
   elem = e.target.closest('entry').outerHTML;
-  elemId = e.target.closest('entry').id
+//  elemId = e.target.closest('entry').id // doesn't work with 'xml:id'
+  element = e.target.closest('entry'); // because it's an 'xml:id'
+//  elemId = element.getAttribute('xml:id'); // does seem to work
   // Get new editports for every new instance of window
   editport1 = getEditPorts();
   // Send the message on editport1
@@ -47,7 +49,8 @@ function elemClick(e) {
 
 // Handle messages received on editport1
 function editMessage(messageEvent) {
-  document.getElementById(elemId).replaceWith(messageEvent.data);
+//  document.getElementById(elemId).replaceWith(messageEvent.data); // doesn't work with 'xml:id'
+  element.replaceWith(messageEvent.data); // does seem to work
   xml_content = document.getElementById('tei_wrapper').innerHTML;
   xml_content = xml_content.replaceAll('&lt;', '<'); // &lt; = <
   xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
