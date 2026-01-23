@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="custom.xsl"?>
+<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
 <!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
 <TEI xmlns="http://www.w3.org/1999/xhtml" tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" xml:id="id1">
   <teiHeader xml:id="id2">
