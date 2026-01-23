@@ -68,7 +68,7 @@
           </form>
           <sense xml:id="id50" opt="false"></sense>
         </entry>
-        <entry xml:id="_44d22b548c" xml:lang="en" type="main">
+        <entry xmlns="http://www.w3.org/1999/xhtml" xml:id="_44d22b548c" xml:lang="en" type="main">
           <def xml:id="id51" opt="false"></def>
           <etym xml:id="id52" opt="false"></etym>
           <form xml:id="id53" opt="false">
