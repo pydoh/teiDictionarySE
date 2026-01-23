@@ -22,7 +22,7 @@ class createMain {
         nodeIntegration: false,
         contextIsolation: true,
         enableRemoteModule: false,
-        preload: path.join(__dirname, 'js/preloadDisplay.js')
+        preload: path.join(__dirname, 'preloadDisplay.js')
       }
     })
 
@@ -49,14 +49,14 @@ class createSecondary {
         contextIsolation: true,
         enableRemoteModule: false,
 //        sandbox: true,
-        preload: path.join(__dirname, 'js/preloadEditor.js')
+        preload: path.join(__dirname, 'preloadEditor.js')
       }
 
     })
     secondaryWindow.autoHideMenuBar;
 
     secondaryWindow.loadURL(url.format ({
-      pathname: path.join(__dirname, 'data/editor.html'),
+      pathname: path.join(__dirname, '../data/html/editor.html'),
       protocol: 'file:',
       slashes: true
     }))
@@ -70,11 +70,6 @@ class createSecondary {
   };
 
 };
-
-//  mainWindow = new createMain();
-//  const saveport1 = getSavePorts(mainWindow);
-//  const mainmenu = Menu.buildFromTemplate(new createMenu(saveport1));
-//  Menu.setApplicationMenu(mainmenu);
 
 module.exports = {
   createMain,
