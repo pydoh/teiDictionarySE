@@ -1,14 +1,14 @@
 const { ipcRenderer } = require('electron')
 
-ipcRenderer.on('saveport2', e => {
+ipcRenderer.on('save_port2', e => {
   // port received, make it globally available.
   window.electronMessagePort = e.ports[0];
-  saveport2 = window.electronMessagePort;
+  save_port2 = window.electronMessagePort;
 
-  saveport2.onmessage = messageEvent => {
+  save_port2.onmessage = messageEvent => {
     // handle message
     xml_content = document.getElementById('tei_wrapper').innerHTML;
-    saveport2.postMessage(xml_content);
+    save_port2.postMessage(xml_content);
   };
 
 });
@@ -17,16 +17,16 @@ ipcRenderer.on('saveport2', e => {
 var elem = '';
 var elemid = '';
 
-// Get editports
+// Get edit_ports
 function getEditPorts() {
   // A connected pair of message ports is called a channel.
-  const editchannel = new MessageChannel()
+  const edit_channel = new MessageChannel()
   // Messages sent on port1 will be received by port2 and vice-versa.
-  const editport1 = editchannel.port1;
-  const editport2 = editchannel.port2;
-  editport1.onmessage = editMessage;
-  ipcRenderer.postMessage('port', null, [editport2])
-  return editport1
+  const edit_port1 = edit_channel.port1;
+  const edit_port2 = edit_channel.port2;
+  edit_port1.onmessage = editMessage;
+  ipcRenderer.postMessage('edit port', null, [edit_port2]);
+  return edit_port1
 };
 
 // DOMContentLoaded
@@ -41,13 +41,13 @@ function elemClick(e) {
 //  elemId = e.target.closest('entry').id // doesn't work with 'xml:id'
   element = e.target.closest('entry'); // because it's an 'xml:id'
 //  elemId = element.getAttribute('xml:id'); // does seem to work
-  // Get new editports for every new instance of window
-  editport1 = getEditPorts();
-  // Send the message on editport1
-  editport1.postMessage(elem);
+  // Get new edit_ports for every new instance of window
+  edit_port1 = getEditPorts();
+  // Send the message on edit_port1
+  edit_port1.postMessage(elem);
 }
 
-// Handle messages received on editport1
+// Handle messages received on edit_port1
 function editMessage(messageEvent) {
 //  document.getElementById(elemId).replaceWith(messageEvent.data); // doesn't work with 'xml:id'
   element.replaceWith(messageEvent.data); // does seem to work

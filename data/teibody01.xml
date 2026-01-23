@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="custom.xsl"?>
+<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
 <!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
-<TEI xmlns="http://www.w3.org/1999/xhtml" tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" id="id1">
- <teiHeader id="id2">
-  <fileDesc id="id3">
-   <publicationStmt id="id4">
-    <p part="N" id="id5">First published as part of TEI P2, this is the P5
+<TEI xmlns="http://www.w3.org/1999/xhtml" tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" id="id1" xml:id="id1">
+ <teiHeader id="id2" xml:id="id2">
+  <fileDesc id="id3" xml:id="id3">
+   <publicationStmt id="id4" xml:id="id4">
+    <p part="N" id="id5" xml:id="id5">First published as part of TEI P2, this is the P5
          version using a namespace.</p>
    </publicationStmt>
-   <sourceDesc default="false" id="id6">
-    <p part="N" id="id7">No source: this is an original work.</p>
+   <sourceDesc default="false" id="id6" xml:id="id6">
+    <p part="N" id="id7" xml:id="id7">No source: this is an original work.</p>
    </sourceDesc>
   </fileDesc>
  </teiHeader>
- <text id="id8">
-<body xmlns="http://www.tei-c.org/ns/1.0" lang="">
-  <head xmlns="http://www.w3.org/1999/xhtml" id="id9">English-French</head>
- <div xmlns="http://www.w3.org/1999/xhtml" part="N" org="uniform" sample="complete" id="id10">
-  <entry type="main" id="id11">
-   <form opt="false" id="id12">
-    <orth opt="false" id="id13">cat</orth>
+ <text id="id8" xml:id="id8">
+<body xmlns="http://www.tei-c.org/ns/1.0" xml:lang="" lang="">
+  <head xmlns="http://www.w3.org/1999/xhtml" id="id9" xml:id="id9">English-French</head>
+ <div xmlns="http://www.w3.org/1999/xhtml" part="N" org="uniform" sample="complete" id="id10" xml:id="id10">
+  <entry type="main" id="id11" xml:id="id11">
+   <form opt="false" id="id12" xml:id="id12">
+    <orth opt="false" id="id13" xml:id="id13">cat</orth>
    </form>
   </entry>
-  <entry type="main" id="id14">
-   <form opt="false" id="id15">
-    <orth opt="false" id="id16">colour</orth>
-    <form opt="false" id="id17">
-     <usg type="geo" opt="false" id="id18">U.S.</usg>
-     <orth opt="false" id="id19">color</orth>
+  <entry type="main" id="id14" xml:id="id14">
+   <form opt="false" id="id15" xml:id="id15">
+    <orth opt="false" id="id16" xml:id="id16">colour</orth>
+    <form opt="false" id="id17" xml:id="id17">
+     <usg type="geo" opt="false" id="id18" xml:id="id18">U.S.</usg>
+     <orth opt="false" id="id19" xml:id="id19">color</orth>
     </form>
    </form>
   </entry>
-  <entry type="main" id="id20">
-   <form opt="false" id="id21">
-    <orth opt="false" id="id22">dog</orth>
+  <entry type="main" id="id20" xml:id="id20">
+   <form opt="false" id="id21" xml:id="id21">
+    <orth opt="false" id="id22" xml:id="id22">dog</orth>
    </form>
   </entry>
-  <entry type="main" id="id23">
-   <form opt="false" id="id24">
-    <orth opt="false" id="id25">horse</orth>
+  <entry type="main" id="id23" xml:id="id23">
+   <form opt="false" id="id24" xml:id="id24">
+    <orth opt="false" id="id25" xml:id="id25">horse</orth>
    </form>
   </entry>
  </div>
-  <head xmlns="http://www.w3.org/1999/xhtml" id="id26">French-English</head>
- <div xmlns="http://www.w3.org/1999/xhtml" part="N" org="uniform" sample="complete" id="id27">
-  <entry type="main" id="id28">
-   <form opt="false" id="id29">
-    <orth opt="false" id="id30">chat</orth>
+  <head xmlns="http://www.w3.org/1999/xhtml" id="id26" xml:id="id26">French-English</head>
+ <div xmlns="http://www.w3.org/1999/xhtml" part="N" org="uniform" sample="complete" id="id27" xml:id="id27">
+  <entry type="main" id="id28" xml:id="id28">
+   <form opt="false" id="id29" xml:id="id29">
+    <orth opt="false" id="id30" xml:id="id30">chat</orth>
    </form>
   </entry>
-  <entry type="main" id="id31">
-   <form opt="false" id="id32">
-    <orth opt="false" id="id33">couleur</orth>
+  <entry type="main" id="id31" xml:id="id31">
+   <form opt="false" id="id32" xml:id="id32">
+    <orth opt="false" id="id33" xml:id="id33">couleur</orth>
    </form>
   </entry>
-  <entry type="main" id="id34">
-   <form opt="false" id="id35">
-    <orth opt="false" id="id36">chien</orth>
+  <entry type="main" id="id34" xml:id="id34">
+   <form opt="false" id="id35" xml:id="id35">
+    <orth opt="false" id="id36" xml:id="id36">chien</orth>
    </form>
   </entry>
-  <entry xmlns="http://www.w3.org/1999/xhtml" type="main" id="id37">
-   <form opt="false" id="id38">
-    <orth opt="false" id="id39">cheval</orth>
+  <entry type="main" id="id37" xml:id="id37">
+   <form opt="false" id="id38" xml:id="id38">
+    <orth opt="false" id="id39" xml:id="id39">cheval</orth>
    </form>
   </entry>
  </div>
