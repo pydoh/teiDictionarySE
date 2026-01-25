@@ -16,9 +16,9 @@
   </teiHeader>
   <text xml:id="id10">
     <front xml:id="id11"></front>
-    <body xmlns="http://www.tei-c.org/ns/1.0" xml:lang="">
-      <head xmlns="http://www.w3.org/1999/xhtml" xml:id="id12">Aa</head>
-      <div xmlns="http://www.w3.org/1999/xhtml" xml:id="id13" part="N" org="uniform" sample="complete">
+    <body xml:lang="">
+      <head xml:id="id12">Aa</head>
+      <div xml:id="id13" part="N" org="uniform" sample="complete">
         <index xml:id="id14"></index>
         <entry xml:id="_101a54371d" xml:lang="en" type="main">
           <def xml:id="id15" opt="false"></def>
