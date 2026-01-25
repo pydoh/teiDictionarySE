@@ -34,8 +34,35 @@ function getSavePorts(mainWindow) {
   const save_port2 = save_channel.port2;
   mainWindow.webContents.postMessage('save_port2', null, [save_port2])
   save_port1.start();
+  save_port1.postMessage('xml_content');
 
-  return save_port1
+  save_port1.on('message', (event) => {
+    entrystring = event.data;
+    saveXml(entrystring);
+  })
+
+  // Test for 'save_port1 Closed!'
+  save_port1.on('close', (event) => {
+    console.log('save_port1 Closed!');
+  })
+
+};
+
+// Get saveports
+function saveXml(entrystring) {
+  // set up the channels.
+  xml_content = entrystring.replaceAll('&lt;', '<'); // &lt; = <
+  xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
+  headerFirst = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  headerSecond = '<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>\n';
+  headerThird = '<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">\n';
+
+  if ( !(xml_content.includes(headerSecond)) ) {
+    xml_content = headerFirst + headerSecond + headerThird + xml_content;
+  }
+
+  writeData(defaultpath, prj_Name, xml_content);
+
 };
 
 app.on("before-quit", (event) => {
@@ -46,32 +73,9 @@ app.on("before-quit", (event) => {
 app.whenReady().then(async () => {
 
   mainWindow = new createMain();
-  const save_port1 = getSavePorts(mainWindow);
-  const mainmenu = Menu.buildFromTemplate(new createMenu(save_port1));
-  Menu.setApplicationMenu(mainmenu);
+  const main_menu = Menu.buildFromTemplate(new createMenu(mainWindow));
+  Menu.setApplicationMenu(main_menu);
   getSnowflake();
-
-  // Fixme 'save_port1 Closed!' on new page load
-  save_port1.on('message', (event) => {
-    entrystring = event.data;
-    xml_content = entrystring.replaceAll('&lt;', '<'); // &lt; = <
-    xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
-    headerFirst = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    headerSecond = '<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>\n';
-    headerThird = '<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">\n';
-
-    if ( !(xml_content.includes(headerSecond)) ) {
-      xml_content = headerFirst + headerSecond + headerThird + xml_content;
-    }
-
-    writeData(defaultpath, prj_Name, xml_content);
-
-  })
-
-  // Test for 'save_port1 Closed!'
-  save_port1.on('close', (event) => {
-    console.log('save_port1 Closed!');
-  })
 
   ipcMain.on('edit port', e => {
     const [edit_port2] = e.ports;
@@ -82,8 +86,8 @@ app.whenReady().then(async () => {
 
 // Main window menu
 class createMenu {
-  constructor(save_port1) {
-    const mainmenu = [
+  constructor(mainWindow) {
+    const main_menu = [
       {
         label: "File",
         role: 'fileMenu',
@@ -104,7 +108,7 @@ class createMenu {
               label: "Save",
               accelerator: "Ctrl+S",
               click: () => {
-                save_port1.postMessage('xml_content');
+                getSavePorts(mainWindow);
               },
               enabled: true
             },
@@ -121,6 +125,6 @@ class createMenu {
           ]
       },
     ]
-    return mainmenu
+    return main_menu
   }
 }
