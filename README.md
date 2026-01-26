@@ -10,6 +10,11 @@ this code.
 teiDictionary SE is intended to be a 
 simple editor for TEI-P5 dictionary 
 files.
+I'm assuming a Freedict style of file(s) in which each letter of the alphabet is in it's own file.
+
+Aa.xml, Bb.xml, Cc.xml, . . . (and etc.)
+
+This makes the files smaller and easier to handle.
 
 Built with Javascript, Electron and TEI-Boilerplate (TEI-Boilerplate is licensed under the Creative Commons Attribution 3.0). teiDictionary SE 
 is functional enough to show 'proof of concept.'
