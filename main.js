@@ -14,6 +14,7 @@ const {
 // Import required application modules/methods
 const { readData, writeData } = require('./js/file_module.js');
 const { createMain, createSecondary } = require('./js/gui_module.js');
+const { addHeader } = require('./js/text_module.js');
 const { getSnowflake } = require('./js/id_module.js');
 
 // Only pass in a valid defaultPath
@@ -38,30 +39,14 @@ function getSavePorts(mainWindow) {
 
   save_port1.on('message', (event) => {
     entrystring = event.data;
-    saveXml(entrystring);
+    addHeader(entrystring);
+    writeData(defaultpath, prj_Name, xml_content);
   })
 
   // Test for 'save_port1 Closed!'
   save_port1.on('close', (event) => {
     console.log('save_port1 Closed!');
   })
-
-};
-
-// Get saveports
-function saveXml(entrystring) {
-  // set up the channels.
-  xml_content = entrystring.replaceAll('&lt;', '<'); // &lt; = <
-  xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
-  headerFirst = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  headerSecond = '<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>\n';
-  headerThird = '<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">\n';
-
-  if ( !(xml_content.includes(headerSecond)) ) {
-    xml_content = headerFirst + headerSecond + headerThird + xml_content;
-  }
-
-  writeData(defaultpath, prj_Name, xml_content);
 
 };
 
