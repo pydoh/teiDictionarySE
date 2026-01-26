@@ -16,5 +16,7 @@ Aa.xml, Bb.xml, Cc.xml, . . . (and etc.)
 
 This makes the files smaller and easier to handle.
 
-Built with Javascript, Electron and TEI-Boilerplate (TEI-Boilerplate is licensed under the Creative Commons Attribution 3.0). teiDictionary SE 
-is functional enough to show 'proof of concept.'
+Built with Javascript, Electron, TEI-Boilerplate (TEI-Boilerplate is licensed under the Creative Commons Attribution 3.0), 
+Snowflake (@theinternetfolks/snowflake ^1.3.0).
+
+teiDictionary SE is functional enough to show 'proof of concept.'
