@@ -14,8 +14,8 @@ const {
 // Import required application modules/methods
 const { readData, writeData } = require('./js/file_module.js');
 const { createMain, createSecondary } = require('./js/gui_module.js');
-const { addHeader } = require('./js/text_module.js');
-const { getSnowflake } = require('./js/id_module.js');
+const { getSnowflake, addHeader } = require('./js/text_module.js');
+//const { getSnowflake } = require('./js/id_module.js');
 
 // Only pass in a valid defaultPath
 //const userDocPath = app.getPath('documents');

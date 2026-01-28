@@ -1,3 +1,10 @@
+import { Snowflake } from "@theinternetfolks/snowflake";
+
+export function getSnowflake() {
+  var uniqueid = Snowflake.generate({ timestamp: 1649157035498, shard_id: 4 })
+  var uuid = '_' + uniqueid; // _6917065950617419944
+  console.log(uuid);
+}
 
 function unEscape (entry_string) {
     xml_content = entry_string.replaceAll('&lt;', '<'); // &lt; = <
@@ -5,7 +12,7 @@ function unEscape (entry_string) {
     return xml_content
 }
 
-function addHeader (entry_string) {
+export function addHeader (entry_string) {
   xml_content = unEscape(entry_string);
   headerFirst = '<?xml version="1.0" encoding="UTF-8"?>\n';
   headerSecond = '<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>\n';
@@ -18,7 +25,7 @@ function addHeader (entry_string) {
 
 }
 
-module.exports = {
-  unEscape,
-  addHeader,
-  }
+//module.exports = {
+//  unEscape,
+//  addHeader,
+//  }
