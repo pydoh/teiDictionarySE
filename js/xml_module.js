@@ -2,7 +2,7 @@ import xml2js from "xml2js";
 
 // Import required application modules/methods
 //const { readData, writeData } = require('./js/file_module.js');
-import getSnowflake from 'text_module.js';
+import { getSnowflake } from './text_module.js';
 
 // -----------------------------------------------------------------------
 //var parser = new xml2js.Parser();
@@ -18,7 +18,7 @@ import getSnowflake from 'text_module.js';
 ////    });
 //}
 
-let obj = {
+let js_obj = {
   TEI: {  $: {  "xmlns": "http://www.w3.org/1999/xhtml"  ,
                 "tei": "http://www.tei-c.org/ns/1.0"  ,
                 "xml": "http://www.w3.org/XML/1998/namespace"  ,
