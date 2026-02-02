@@ -8,7 +8,7 @@
         "start": "electron .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "kmetzker",
+    "author": "pydoh",
     "license": "GPL-3.0-or-later",
     "contributors": [],
     "devDependencies": {
