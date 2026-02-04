@@ -4,6 +4,14 @@ import xml2js from "xml2js";
 //const { readData, writeData } = require('./js/file_module.js');
 import { getSnowflake } from './text_module.js';
 
+// Advanced configuration <?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
+const build_options = {
+//  advanced: true,
+  xmldec: {'version': '1.0', 'encoding': 'UTF-8'},
+  doctype: {'sysID': "z-tei-dictionary.dtd"},
+  // Additional options
+}
+
 // -----------------------------------------------------------------------
 //var parser = new xml2js.Parser();
 //var builder = new xml2js.Builder();
@@ -67,7 +75,7 @@ export function jsToXmlFile() {  // js_obj filename, , cb
 //    var filepath = path.normalize(path.join(__dirname, filename));
 //    console.log('test', js_obj);
     recursiveIter(js_obj);
-    var builder = new xml2js.Builder();
+    var builder = new xml2js.Builder(build_options);
     var xml = builder.buildObject(js_obj);
     console.log(xml);
 //    fs.writeFile(filepath, xml, cb);
