@@ -14,7 +14,7 @@ const build_options = {
 
 // -----------------------------------------------------------------------
 //var parser = new xml2js.Parser();
-//var builder = new xml2js.Builder();
+var builder = new xml2js.Builder(build_options);
 // -----------------------------------------------------------------------
 
 //export function xmlFileToJs(filename, cb) {
@@ -62,12 +62,17 @@ function recursiveIter(js_obj){
 // Set attribution
 function setAttribution (targets, attrib, value) { // 'xml:id'
   for (let nextKey in targets) {
-    if (nextKey !== attrib) {
-      return;
-    }
-    else if (nextKey === attrib) {
+
+//    if (nextKey !== attrib) {
+//      return;
+
+    if (nextKey === attrib) {
       targets[nextKey] = getSnowflake();
     }
+//    else if (nextKey !== attrib) {
+////      targets[nextKey] = getSnowflake();
+//      return;
+//    }
   }
 }
 
@@ -75,7 +80,7 @@ export function jsToXmlFile() {  // js_obj filename, , cb
 //    var filepath = path.normalize(path.join(__dirname, filename));
 //    console.log('test', js_obj);
     recursiveIter(js_obj);
-    var builder = new xml2js.Builder(build_options);
+//    var builder = new xml2js.Builder(build_options);
     var xml = builder.buildObject(js_obj);
     console.log(xml);
 //    fs.writeFile(filepath, xml, cb);
