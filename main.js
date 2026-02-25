@@ -14,8 +14,8 @@ const {
 // Import required application modules/methods
 const { readData, writeData } = require('./js/file_module.js');
 const { createMain, createSecondary } = require('./js/gui_module.js');
-const { addHeader } = require('./js/text_module.js');
-const { getSnowflake } = require('./js/id_module.js');
+const { getSnowflake, addHeader } = require('./js/text_module.js');
+const { jsToXmlFile } = require('./js/xml_module.js');
 
 // Only pass in a valid defaultPath
 //const userDocPath = app.getPath('documents');
@@ -60,7 +60,8 @@ app.whenReady().then(async () => {
   mainWindow = new createMain();
   const main_menu = Menu.buildFromTemplate(new createMenu(mainWindow));
   Menu.setApplicationMenu(main_menu);
-  getSnowflake();
+//  getSnowflake();
+//  jsToXmlFile();
 
   ipcMain.on('edit port', e => {
     const [edit_port2] = e.ports;

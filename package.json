@@ -8,13 +8,14 @@
         "start": "electron .",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "kmetzker",
+    "author": "pydoh",
     "license": "GPL-3.0-or-later",
     "contributors": [],
     "devDependencies": {
         "electron": "^39.2.7"
     },
     "dependencies": {
-        "@theinternetfolks/snowflake": "^1.3.0"
+        "@theinternetfolks/snowflake": "^1.3.0",
+        "xml2js": "^0.6.2"
     }
 }

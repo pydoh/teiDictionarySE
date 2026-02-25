@@ -21,8 +21,6 @@
       <div xml:id="id13" part="N" org="uniform" sample="complete">
         <index xml:id="id14"></index>
         <entry xml:id="_101a54371d" xml:lang="en" type="main">
-          <def xml:id="id15" opt="false"></def>
-          <etym xml:id="id16" opt="false"></etym>
           <form xml:id="id17" opt="false">
             <orth xml:id="id18" opt="false">aardvark</orth>
             <pron xml:id="id19" opt="false"></pron>
@@ -30,11 +28,11 @@
             <gloss xml:id="id21">one vark</gloss>
             <usg xml:id="id22" opt="false"></usg>
           </form>
+          <def xml:id="id15" opt="false"></def>
+          <etym xml:id="id16" opt="false"></etym>
           <sense xml:id="id23" opt="false"></sense>
         </entry>
         <entry xml:id="_256c5fb321" xml:lang="en" type="main">
-          <def xml:id="id24" opt="false"></def>
-          <etym xml:id="id25" opt="false"></etym>
           <form xml:id="id26" opt="false">
             <orth xml:id="id27" opt="false">aardvarks</orth>
             <pron xml:id="id28" opt="false"></pron>
@@ -42,11 +40,11 @@
             <gloss xml:id="id30">a bunch of varks</gloss>
             <usg xml:id="id31" opt="false"></usg>
           </form>
+          <def xml:id="id24" opt="false"></def>
+          <etym xml:id="id25" opt="false"></etym>
           <sense xml:id="id32" opt="false"></sense>
         </entry>
         <entry xml:id="_3fcc9d2b53" xml:lang="en" type="main">
-          <def xml:id="id33" opt="false"></def>
-          <etym xml:id="id34" opt="false"></etym>
           <form xml:id="id35" opt="false">
             <orth xml:id="id36" opt="false">aback</orth>
             <pron xml:id="id37" opt="false"></pron>
@@ -54,11 +52,11 @@
             <gloss xml:id="id39">and aforth</gloss>
             <usg xml:id="id40" opt="false"></usg>
           </form>
+          <def xml:id="id33" opt="false"></def>
+          <etym xml:id="id34" opt="false"></etym>
           <sense xml:id="id41" opt="false"></sense>
         </entry>
         <entry xml:id="_4f19082183" xml:lang="en" type="main">
-          <def xml:id="id42" opt="false"></def>
-          <etym xml:id="id43" opt="false"></etym>
           <form xml:id="id44" opt="false">
             <orth xml:id="id45" opt="false">abacus</orth>
             <pron xml:id="id46" opt="false"></pron>
@@ -66,11 +64,11 @@
             <gloss xml:id="id48">one cus</gloss>
             <usg xml:id="id49" opt="false"></usg>
           </form>
+          <def xml:id="id42" opt="false"></def>
+          <etym xml:id="id43" opt="false"></etym>
           <sense xml:id="id50" opt="false"></sense>
         </entry>
         <entry xml:id="_44d22b548c" xml:lang="en" type="main">
-          <def xml:id="id51" opt="false"></def>
-          <etym xml:id="id52" opt="false"></etym>
           <form xml:id="id53" opt="false">
             <orth xml:id="id54" opt="false">abacuses</orth>
             <pron xml:id="id55" opt="false"></pron>
@@ -78,6 +76,8 @@
             <gloss xml:id="id57">a bunch of cusses</gloss>
             <usg xml:id="id58" opt="false"></usg>
           </form>
+          <def xml:id="id51" opt="false"></def>
+          <etym xml:id="id52" opt="false"></etym>
           <sense xml:id="id59" opt="false"></sense>
         </entry>
       </div>
