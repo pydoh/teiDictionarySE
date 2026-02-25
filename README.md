@@ -20,3 +20,5 @@ Built with Javascript, Electron, TEI-Boilerplate (TEI-Boilerplate is licensed un
 Snowflake (@theinternetfolks/snowflake ^1.3.0).
 
 teiDictionary SE is functional enough to show 'proof of concept.'
+
+![teiDictionary_SE_01.png](doc/teiDictionary_SE_01.png)
