@@ -22,6 +22,7 @@ class createMain {
         nodeIntegration: false,
         contextIsolation: true,
         enableRemoteModule: false,
+        sandbox: true,
         preload: path.join(__dirname, 'preloadDisplay.js')
       }
     })
@@ -42,18 +43,19 @@ class createSecondary {
 //      autoHideMenuBar: true,
 //      frame: false,
 //      fullscreenable: false,
-      width: 805,
+      width: 806,
       height: 600,
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
         enableRemoteModule: false,
-//        sandbox: true,
+        sandbox: true,
         preload: path.join(__dirname, 'preloadEditor.js')
       }
 
     })
     secondaryWindow.autoHideMenuBar;
+//    secondaryWindow.webContents.openDevTools()
 
     secondaryWindow.loadURL(url.format ({
       pathname: path.join(__dirname, '../data/html/editor.html'),
