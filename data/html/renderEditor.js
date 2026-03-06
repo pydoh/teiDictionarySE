@@ -1,4 +1,4 @@
-var docSpec={
+var docSpec = {
   onchange: function(){
     console.log("I been changed now!")
   },
@@ -6,14 +6,14 @@ var docSpec={
     console.log("I be validatin' now!")
   },
   elements: {
-    "list": {
+    "entry": {
       menu: [{
-        caption: "Append an <item>",
+        caption: "Append an <form>",
         action: Xonomy.newElementChild,
-        actionParameter: "<item/>"
+        actionParameter: "<form/>" // def, etym, sense
       }]
     },
-    "item": {
+    "form": {
       menu: [{
         caption: "Add @label=\"something\"",
         action: Xonomy.newAttribute,
@@ -22,9 +22,9 @@ var docSpec={
           return jsElement.hasAttribute("label");
         }
     }, {
-      caption: "New child <item>",
+      caption: "New child <orth>",
       action: Xonomy.newElementChild,
-      actionParameter: "<item/>"
+      actionParameter: "<orth/>"
     }, {
       caption: "New <item> before this",
       action: Xonomy.newElementBefore,

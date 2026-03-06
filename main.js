@@ -39,7 +39,7 @@ function getSavePorts(mainWindow) {
 
   save_port1.on('message', (event) => {
     entrystring = event.data;
-    addHeader(entrystring);
+    xml_content = addHeader(entrystring);
     writeData(defaultpath, prj_Name, xml_content);
   })
 
