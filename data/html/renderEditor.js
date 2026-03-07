@@ -1,9 +1,9 @@
 var docSpec = {
   onchange: function(){
-    console.log("I been changed now!")
+    console.log("Element changed now!")
   },
   validate: function(obj){
-    console.log("I be validatin' now!")
+    console.log("Element validating now!")
   },
   elements: {
     "entry": {
@@ -26,6 +26,8 @@ var docSpec = {
       }]
     },
     "form": {
+      hasText: true,
+//      oneliner: true,
       menu: [{
         caption: "Add @label=\"something\"",
         action: Xonomy.newAttribute,
@@ -72,6 +74,78 @@ var docSpec = {
 //        }
 //      }
     },
+    "def": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
+    "etym": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
+    "sense": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
+    "orth": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        asker: Xonomy.askString,
+////        action: Xonomy.newElementChild,
+////        actionParameter: "<extent/>"
+//      }]
+    },
+    "pron": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
+    "pos": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
+    "gloss": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
+    "usg": {
+      hasText: true,
+//      oneliner: true,
+//      menu: [{
+//        caption: "New child <extent>",
+//        action: Xonomy.newElementChild,
+//        actionParameter: "<extent/>"
+//      }]
+    },
     "cit": {
       menu: [{
         caption: "New child <quote>",
@@ -87,7 +161,38 @@ var docSpec = {
         actionParameter: "<gramGrp/>"
       }]
     },
+    "quote": {
+      hasText: true,
+//      oneliner: true,
+      menu: [{
+        caption: "New child <extent>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<extent/>"
+      }]
+    },
     "bibl": {
+      // "oneliner: true," conflicts with "hasText: true," (maybe only in laic mode???)
+      hasText: true,
+//      oneliner: true,
+      menu: [{
+        caption: "New child <extent>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<extent/>"
+      }]
+    },
+    "gramGrp": {
+      hasText: true,
+//      oneliner: true,
+      menu: [{
+        // Weird ass problem with <extent>
+        caption: "New child <extent>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<extent/>"
+      }]
+    },
+    "extent": {
+      hasText: true,
+//      oneliner: true,
       menu: [{
         caption: "New child <extent>",
         action: Xonomy.newElementChild,
