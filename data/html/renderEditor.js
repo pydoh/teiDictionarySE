@@ -35,44 +35,60 @@ var docSpec = {
         hideIf: function(jsElement){
           return jsElement.hasAttribute("label");
         }
-    }, {
-      caption: "New child <orth>",
-      action: Xonomy.newElementChild,
-      actionParameter: "<orth/>"
-    }, {
-      caption: "New child <pron>",
-      action: Xonomy.newElementChild,
-      actionParameter: "<pron/>" // def, etym, sense
-    }, {
-      caption: "New child <pos>",
-      action: Xonomy.newElementChild,
-      actionParameter: "<pos/>"
-    }, {
-      caption: "New child <gloss>",
-      action: Xonomy.newElementChild,
-      actionParameter: "<gloss/>"
-    }, {
-      caption: "New child <usg>",
-      action: Xonomy.newElementChild,
-      actionParameter: "<usg/>"
-    }, {
-      caption: "New child <cit>",
-      action: Xonomy.newElementChild,
-      actionParameter: "<cit/>"
-    }, {
-      caption: "Delete this <item>",
-      action: Xonomy.deleteElement
-    }],
-//    canDropTo: ["list"],
-//      attributes: {
-//        "label": {
-//          asker: Xonomy.askString,
-//          menu: [{
-//            caption: "Delete this @label",
-//            action: Xonomy.deleteAttribute
-//          }]
-//        }
-//      }
+        }, {
+          caption: "New child",
+          menu: [{
+            caption: "<orth>",
+            action: Xonomy.newElementChild,
+            actionParameter: "<orth/>",
+//            hideIf: ...
+          }, {
+            caption: "<pron>",
+            action: Xonomy.newElementChild,
+            actionParameter: "<pron/>", // def, etym, sense
+//            hideIf: ...
+          }, {
+            caption: "<pos>",
+            action: Xonomy.newElementChild,
+            actionParameter: "<pos/>"
+//            hideIf: ...
+          }, {
+            caption: "<gloss>",
+            action: Xonomy.newElementChild,
+            actionParameter: "<gloss/>"
+//            hideIf: ...
+          }, {
+            caption: "<usg>",
+            action: Xonomy.newElementChild,
+            actionParameter: "<usg/>"
+//            hideIf: ...
+          }, {
+            caption: "<cit>",
+            action: Xonomy.newElementChild,
+            actionParameter: "<cit/>"
+//            hideIf: ...
+          }],
+        }, {
+          caption: "Delete this <item>",
+          action: Xonomy.deleteElement
+        }],
+//        canDropTo: ["list"],
+//          attributes: {
+//            "xml:id": {
+//              asker: Xonomy.askString,
+//              menu: [{
+//                caption: "Delete this @label",
+//                action: Xonomy.deleteAttribute
+//              }]
+//            }
+//            "label": {
+//              asker: Xonomy.askString,
+//              menu: [{
+//                caption: "Delete this @label",
+//                action: Xonomy.deleteAttribute
+//              }]
+//            }
+//          }
     },
     "def": {
       hasText: true,
