@@ -38,35 +38,47 @@ var docSpec = {
         }, {
           caption: "New child",
           menu: [{
-            caption: "<orth>",
+            caption: "New <orth>",
             action: Xonomy.newElementChild,
             actionParameter: "<orth/>",
-//            hideIf: ...
+            hideIf: function(jsElement) {
+              return jsElement.hasChildElement("orth");
+            },
           }, {
-            caption: "<pron>",
+            caption: "New <pron>",
             action: Xonomy.newElementChild,
             actionParameter: "<pron/>", // def, etym, sense
-//            hideIf: ...
+            hideIf: function(jsElement) {
+              return jsElement.hasChildElement("pron");
+            },
           }, {
-            caption: "<pos>",
+            caption: "New <pos>",
             action: Xonomy.newElementChild,
-            actionParameter: "<pos/>"
-//            hideIf: ...
+            actionParameter: "<pos/>",
+            hideIf: function(jsElement) {
+              return jsElement.hasChildElement("pos");
+            },
           }, {
-            caption: "<gloss>",
+            caption: "New <gloss>",
             action: Xonomy.newElementChild,
-            actionParameter: "<gloss/>"
-//            hideIf: ...
+            actionParameter: "<gloss/>",
+            hideIf: function(jsElement) {
+              return jsElement.hasChildElement("gloss");
+            },
           }, {
-            caption: "<usg>",
+            caption: "New <usg>",
             action: Xonomy.newElementChild,
-            actionParameter: "<usg/>"
-//            hideIf: ...
+            actionParameter: "<usg/>",
+            hideIf: function(jsElement) {
+              return jsElement.hasChildElement("usg");
+            },
           }, {
-            caption: "<cit>",
+            caption: "New <cit>",
             action: Xonomy.newElementChild,
-            actionParameter: "<cit/>"
-//            hideIf: ...
+            actionParameter: "<cit/>",
+            hideIf: function(jsElement) {
+              return jsElement.hasChildElement("cit");
+            },
           }],
         }, {
           caption: "Delete this <item>",
