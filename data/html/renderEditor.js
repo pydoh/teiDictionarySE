@@ -8,9 +8,21 @@ var docSpec = {
   elements: {
     "entry": {
       menu: [{
-        caption: "Append an <form>",
+        caption: "New child <form>",
         action: Xonomy.newElementChild,
         actionParameter: "<form/>" // def, etym, sense
+      }, {
+        caption: "New child <def>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<def/>"
+      }, {
+        caption: "New child <etym>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<etym/>"
+      }, {
+        caption: "New child <sense>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<sense/>"
       }]
     },
     "form": {
@@ -26,28 +38,62 @@ var docSpec = {
       action: Xonomy.newElementChild,
       actionParameter: "<orth/>"
     }, {
-      caption: "New <item> before this",
-      action: Xonomy.newElementBefore,
-      actionParameter: "<item/>"
+      caption: "New child <pron>",
+      action: Xonomy.newElementChild,
+      actionParameter: "<pron/>" // def, etym, sense
     }, {
-      caption: "New <item> after this",
-      action: Xonomy.newElementAfter,
-      actionParameter: "<item/>"
+      caption: "New child <pos>",
+      action: Xonomy.newElementChild,
+      actionParameter: "<pos/>"
+    }, {
+      caption: "New child <gloss>",
+      action: Xonomy.newElementChild,
+      actionParameter: "<gloss/>"
+    }, {
+      caption: "New child <usg>",
+      action: Xonomy.newElementChild,
+      actionParameter: "<usg/>"
+    }, {
+      caption: "New child <cit>",
+      action: Xonomy.newElementChild,
+      actionParameter: "<cit/>"
     }, {
       caption: "Delete this <item>",
       action: Xonomy.deleteElement
     }],
-    canDropTo: ["list"],
-      attributes: {
-        "label": {
-          asker: Xonomy.askString,
-          menu: [{
-            caption: "Delete this @label",
-            action: Xonomy.deleteAttribute
-          }]
-        }
-      }
-    }
+//    canDropTo: ["list"],
+//      attributes: {
+//        "label": {
+//          asker: Xonomy.askString,
+//          menu: [{
+//            caption: "Delete this @label",
+//            action: Xonomy.deleteAttribute
+//          }]
+//        }
+//      }
+    },
+    "cit": {
+      menu: [{
+        caption: "New child <quote>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<quote/>"
+      }, {
+        caption: "New child <bibl>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<bibl/>"
+      }, {
+        caption: "New child <gramGrp>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<gramGrp/>"
+      }]
+    },
+    "bibl": {
+      menu: [{
+        caption: "New child <extent>",
+        action: Xonomy.newElementChild,
+        actionParameter: "<extent/>"
+      }]
+    },
   }
 };
 
