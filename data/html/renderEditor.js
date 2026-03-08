@@ -7,6 +7,10 @@ var docSpec = {
   },
   elements: {
     "entry": {
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -47,6 +51,10 @@ var docSpec = {
     "form": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -135,6 +143,10 @@ var docSpec = {
     "def": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -151,6 +163,10 @@ var docSpec = {
     "etym": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -167,6 +183,10 @@ var docSpec = {
     "sense": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -183,6 +203,10 @@ var docSpec = {
     "orth": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+        "xml:lang": {},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -203,6 +227,10 @@ var docSpec = {
     "pron": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -219,6 +247,10 @@ var docSpec = {
     "pos": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -235,6 +267,10 @@ var docSpec = {
     "gloss": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -251,6 +287,10 @@ var docSpec = {
     "usg": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -265,6 +305,10 @@ var docSpec = {
       }]
     },
     "cit": {
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -297,6 +341,10 @@ var docSpec = {
     "quote": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -314,6 +362,10 @@ var docSpec = {
       // "oneliner: true," conflicts with "hasText: true," (maybe only in laic mode???)
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -330,6 +382,10 @@ var docSpec = {
     "gramGrp": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
@@ -346,6 +402,10 @@ var docSpec = {
     "extent": {
       hasText: true,
 //      oneliner: true,
+      attributes: {
+        "xml:id": {},
+//        "myOtherAttribute": {...},
+      },
       menu: [{
         caption: "Add @xml:id",
         action: Xonomy.newAttribute,
