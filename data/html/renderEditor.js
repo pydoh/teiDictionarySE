@@ -8,34 +8,64 @@ var docSpec = {
   elements: {
     "entry": {
       menu: [{
-        caption: "New child <form>",
-        action: Xonomy.newElementChild,
-        actionParameter: "<form/>" // def, etym, sense
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+//        hideIf: function(jsElement){
+//          return jsElement.hasAttribute("xml:id");
+//        },
       }, {
         caption: "New child <def>",
         action: Xonomy.newElementChild,
-        actionParameter: "<def/>"
+        actionParameter: "<def/>",
+        hideIf: function(jsElement) {
+          return jsElement.hasChildElement("def");
+        },
       }, {
         caption: "New child <etym>",
         action: Xonomy.newElementChild,
-        actionParameter: "<etym/>"
+        actionParameter: "<etym/>",
+        hideIf: function(jsElement) {
+          return jsElement.hasChildElement("etym");
+        },
       }, {
         caption: "New child <sense>",
         action: Xonomy.newElementChild,
-        actionParameter: "<sense/>"
+        actionParameter: "<sense/>",
+        hideIf: function(jsElement) {
+          return jsElement.hasChildElement("sense");
+        },
       }]
     },
     "form": {
       hasText: true,
 //      oneliner: true,
       menu: [{
-        caption: "Add @label=\"something\"",
+        caption: "Add @xml:id",
         action: Xonomy.newAttribute,
-        actionParameter: {name: "label", value: "something"},
+        actionParameter: {name: "xml:id", value: "NCName"},
         hideIf: function(jsElement){
-          return jsElement.hasAttribute("label");
-        }
-        }, {
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+//        hideIf: function(jsElement){
+//          return jsElement.hasAttribute("xml:id");
+//        },
+      }, {
+        caption: "New <form>",
+        action: Xonomy.newElementAfter,
+        actionParameter: "<form/>",
+      }, {
           caption: "New child",
           menu: [{
             caption: "New <orth>",
@@ -105,77 +135,152 @@ var docSpec = {
     "def": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "etym": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "sense": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "orth": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        asker: Xonomy.askString,
-////        action: Xonomy.newElementChild,
-////        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }, {
+        caption: "New <orth>",
+        action: Xonomy.newElementAfter,
+        actionParameter: "<orth/>",
+      }]
     },
     "pron": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "pos": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "gloss": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "usg": {
       hasText: true,
 //      oneliner: true,
-//      menu: [{
-//        caption: "New child <extent>",
-//        action: Xonomy.newElementChild,
-//        actionParameter: "<extent/>"
-//      }]
+      menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }]
     },
     "cit": {
       menu: [{
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }, {
+        caption: "New <cit>",
+        action: Xonomy.newElementAfter,
+        actionParameter: "<cit/>",
+      }, {
         caption: "New child <quote>",
         action: Xonomy.newElementChild,
         actionParameter: "<quote/>"
@@ -193,9 +298,16 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       menu: [{
-        caption: "New child <extent>",
-        action: Xonomy.newElementChild,
-        actionParameter: "<extent/>"
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
       }]
     },
     "bibl": {
@@ -203,28 +315,52 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       menu: [{
-        caption: "New child <extent>",
-        action: Xonomy.newElementChild,
-        actionParameter: "<extent/>"
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
       }]
     },
     "gramGrp": {
       hasText: true,
 //      oneliner: true,
       menu: [{
-        // Weird ass problem with <extent>
-        caption: "New child <extent>",
-        action: Xonomy.newElementChild,
-        actionParameter: "<extent/>"
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
       }]
     },
     "extent": {
       hasText: true,
 //      oneliner: true,
       menu: [{
-        caption: "New child <extent>",
-        action: Xonomy.newElementChild,
-        actionParameter: "<extent/>"
+        caption: "Add @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+        hideIf: function(jsElement){
+          return jsElement.hasAttribute("xml:id");
+        },
+      }, {
+        caption: "Generate @xml:id",
+        action: Xonomy.newAttribute,
+        actionParameter: {name: "xml:id", value: "NCName"},
+      }, {
+        caption: "New <extent>",
+        action: Xonomy.newElementAfter,
+        actionParameter: "<extent/>",
       }]
     },
   }
