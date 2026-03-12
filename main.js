@@ -50,6 +50,28 @@ function getSavePorts(mainWindow) {
 
 };
 
+// Get xmlidports
+function getXmlIdPorts(edit_port2, mainWindow) {
+  // set up the channels.
+  const xmlid_channel = new MessageChannelMain()
+  const xmlid_port1 = xmlid_channel.port1;
+  const xmlid_port2 = xmlid_channel.port2;
+  xmlid_port2.start();
+  const secondaryWindow = new createSecondary(edit_port2, xmlid_port1, mainWindow);
+
+  xmlid_port2.on('message', (event) => {
+//    getSnowflake();
+    var xmlid = getSnowflake();
+    xmlid_port2.postMessage(xmlid);
+  })
+
+  // Test for 'xmlid_port2 Closed!'
+  xmlid_port2.on('close', (event) => {
+    console.log('xmlid_port2 Closed!');
+  })
+
+};
+
 app.on("before-quit", (event) => {
     const windows = BrowserWindow.getAllWindows();
     windows.forEach((window) => window.destroy());
@@ -60,12 +82,11 @@ app.whenReady().then(async () => {
   mainWindow = new createMain();
   const main_menu = Menu.buildFromTemplate(new createMenu(mainWindow));
   Menu.setApplicationMenu(main_menu);
-//  getSnowflake();
 //  jsToXmlFile();
 
   ipcMain.on('edit port', e => {
     const [edit_port2] = e.ports;
-    const secondaryWindow = new createSecondary(edit_port2, mainWindow);
+    getXmlIdPorts(edit_port2, mainWindow);
   })
 
 })

@@ -1,3 +1,67 @@
+// -> Custom javascript --------------------------------------------------------------------------
+function start() {
+  window.onmessage = (event) => {
+    // event.source === window means the message is coming from the preload
+    // script, as opposed to from an <iframe> or other source.
+    if (event.source === window && event.data === 'edit_port2') {
+      const [ edit_port2 ] = event.ports;
+      this.edit_port2 = edit_port2;
+    } else if (event.source === window && event.data === 'xmlid_port1') {
+      const [ xmlid_port1 ] = event.ports;
+      this.xmlid_port1 = xmlid_port1;
+//      getXmlId();
+
+    }
+
+    // Once we have the port, we can communicate directly with the main
+    // process.
+    this.edit_port2.onmessage = (event) => {
+      var xml = event.data;
+      var editor=document.getElementById("editor");
+      Xonomy.render(xml, editor, docSpec);
+
+      const cancel = window.document.querySelector("#cancelBtn");
+      const save = window.document.querySelector("#saveBtn");
+
+      // Listen for button clicks
+      cancel.addEventListener('click', () => { onCancel() });
+      save.addEventListener("click", () => { onSave() });
+
+      function onCancel() {
+        closeWindow();
+      }
+
+      function onSave() {
+        var newelem = Xonomy.harvest();
+        this.edit_port2.postMessage(newelem);
+        closeWindow();
+      }
+
+      function closeWindow() {
+        this.edit_port2.close();
+        window.close();
+      }
+    }
+
+//    this.xmlid_port1.postMessage('xmlid');
+//    this.xmlid_port1.onmessage = (event) => {
+//      var xml_id = event.data;
+//      alert(xml_id);
+//    }
+
+    function getXmlId() {
+      this.xmlid_port1.postMessage('xmlid');
+      this.xmlid_port1.onmessage = (event) => {
+        var xml_id = event.data;
+        alert(xml_id);
+        return xml_id
+      }
+    }
+
+  }
+
+}
+
 var docSpec = {
   onchange: function(){
     console.log("Element changed now!")
@@ -8,7 +72,9 @@ var docSpec = {
   elements: {
     "entry": {
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -19,13 +85,13 @@ var docSpec = {
           return jsElement.hasAttribute("xml:id");
         },
       }, {
-        caption: "Generate @xml:id",
-        action: Xonomy.newAttribute,
-        actionParameter: {name: "xml:id", value: "NCName"},
+//        caption: "Generate @xml:id",
+//        action: getXmlId,
+//        actionParameter: {name: "xml:id", value: "NCName"},
 //        hideIf: function(jsElement){
 //          return jsElement.hasAttribute("xml:id");
 //        },
-      }, {
+//      }, {
         caption: "New child <def>",
         action: Xonomy.newElementChild,
         actionParameter: "<def/>",
@@ -49,10 +115,13 @@ var docSpec = {
       }]
     },
     "form": {
+      mustBeBefore: ["def"],
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -141,10 +210,13 @@ var docSpec = {
 //          }
     },
     "def": {
+      mustBeBefore: ["etym"],
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -161,10 +233,13 @@ var docSpec = {
       }]
     },
     "etym": {
+      mustBeBefore: ["sense"],
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -184,7 +259,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -204,8 +281,12 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
-        "xml:lang": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
+        "xml:lang": {
+        asker: Xonomy.askString
+        },
       },
       menu: [{
         caption: "Add @xml:id",
@@ -228,7 +309,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -248,7 +331,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -268,7 +353,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -288,7 +375,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -306,7 +395,9 @@ var docSpec = {
     },
     "cit": {
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -342,7 +433,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -363,7 +456,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -383,7 +478,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -403,7 +500,9 @@ var docSpec = {
       hasText: true,
 //      oneliner: true,
       attributes: {
-        "xml:id": {},
+        "xml:id": {
+        asker: Xonomy.askString
+        },
 //        "myOtherAttribute": {...},
       },
       menu: [{
@@ -426,43 +525,4 @@ var docSpec = {
   }
 };
 
-// -> Custom javascript --------------------------------------------------------------------------
-function start() {
-  window.onmessage = (event) => {
-    // event.source === window means the message is coming from the preload
-    // script, as opposed to from an <iframe> or other source.
-    if (event.source === window && event.data === 'editport2') {
-      const [ editport2 ] = event.ports
-      // Once we have the port, we can communicate directly with the main
-      // process.
-      editport2.onmessage = (event) => {
-        var xml = event.data;
-        var editor=document.getElementById("editor");
-        Xonomy.render(xml, editor, docSpec);
-
-        const cancel = window.document.querySelector("#cancelBtn");
-        const save = window.document.querySelector("#saveBtn");
-
-        // Listen for button clicks
-        cancel.addEventListener('click', () => { onCancel() });
-        save.addEventListener("click", () => { onSave() });
-
-        function onCancel() {
-          closeWindow();
-        }
-
-        function onSave() {
-          var newelem = Xonomy.harvest();
-          editport2.postMessage(newelem);
-          closeWindow();
-        }
-
-        function closeWindow() {
-          editport2.close();
-          window.close();
-        }
-      }
-    }
-  }
-}
 // -> Custom javascript --------------------------------------------------------------------------

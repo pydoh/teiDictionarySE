@@ -34,7 +34,8 @@ class createMain {
 
 // Create secondaryWindow
 class createSecondary {
-  constructor(editport2, mainWindow) { // width, height
+//  constructor(edit_port2, mainWindow) { // width, height
+  constructor(edit_port2, xmlid_port1, mainWindow) { // width, height
     // Write elem to child window.
     const secondaryWindow = new BrowserWindow({
 //      parent: mainWindow,
@@ -65,7 +66,8 @@ class createSecondary {
 
     secondaryWindow.once('ready-to-show', () => {
       // Send editport2 to secondaryWindow
-      secondaryWindow.webContents.postMessage('editport2', null, [editport2]);
+      secondaryWindow.webContents.postMessage('edit_port2', null, [edit_port2]);
+      secondaryWindow.webContents.postMessage('xmlid_port1', null, [xmlid_port1]);
     })
 
     return secondaryWindow
