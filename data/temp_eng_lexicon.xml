@@ -7,30 +7,30 @@
       <titleStmt xml:id="id4">
       </titleStmt>
       <publicationStmt xml:id="id6">
-        <publisher xml:id="id7"/>
+        <publisher xml:id="id7"></publisher>
       </publicationStmt>
       <sourceDesc default="false" xml:id="id8">
-        <bibl xml:id="id9" default="false" status="draft"/>
+        <bibl xml:id="id9" default="false" status="draft"></bibl>
       </sourceDesc>
     </fileDesc>
   </teiHeader>
   <text xml:id="id10">
-    <front xml:id="id11"/>
+    <front xml:id="id11"></front>
     <body xml:lang="">
       <head xml:id="id12">Aa</head>
       <div xml:id="id13" part="N" org="uniform" sample="complete">
-        <index xml:id="id14"/>
-        <entry xml:id="_101a54371d" xml:lang="en" type="main">
-          <form xml:id="id17" opt="false">
-            <orth xml:id="id18" opt="false">aardvark</orth>
-            <pron xml:id="id19" opt="false"></pron>
-            <pos xml:id="id20" opt="false"></pos>
-            <gloss xml:id="id21">one vark</gloss>
-            <usg xml:id="id22" opt="false"></usg>
+        <index xml:id="id14"></index>
+        <entry xml:id="_6917065950617420750" xml:lang="en" type="main">
+          <form xml:id="_6917065950617423513" opt="false" xml:space="preserve">
+            <orth xml:id="_6917065950617421285" opt="false" xml:space="preserve">aardvark</orth>
+            <pron xml:id="_6917065950617420428" opt="false" xml:space="preserve"></pron>
+            <pos xml:id="_6917065950617421727" opt="false" xml:space="preserve"></pos>
+            <gloss xml:id="_6917065950617423603" xml:space="preserve">one vark</gloss>
+            <usg xml:id="_6917065950617420585" opt="false" xml:space="preserve"></usg>
           </form>
-          <def xml:id="id15" opt="false"></def>
-          <etym xml:id="id16" opt="false"></etym>
-          <sense xml:id="id23" opt="false"></sense>
+          <def xml:id="_6917065950617421496" opt="false" xml:space="preserve"></def>
+          <etym xml:id="_6917065950617422900" opt="false" xml:space="preserve"></etym>
+          <sense xml:id="_6917065950617422761" opt="false" xml:space="preserve"></sense>
         </entry>
         <entry xml:id="_256c5fb321" xml:lang="en" type="main">
           <form xml:id="id26" opt="false">
@@ -44,17 +44,16 @@
           <etym xml:id="id25" opt="false"></etym>
           <sense xml:id="id32" opt="false"></sense>
         </entry>
-        <entry xml:id="_3fcc9d2b53" xml:lang="en" type="main">
-          <form xml:id="id35" opt="false">
-            <orth xml:id="id36" opt="false">aback</orth>
-            <pron xml:id="id37" opt="false"></pron>
-            <pos xml:id="id38" opt="false"></pos>
-            <gloss xml:id="id39">and aforth</gloss>
-            <usg xml:id="id40" opt="false"></usg>
+        <entry xml:id="_6917065950617423337" xml:lang="en" type="main"><form xml:id="_6917065950617421507" opt="false" xml:space="preserve">
+            <orth xml:id="_6917065950617421044" opt="false" xml:space="preserve">aback</orth>
+            <pron xml:id="_6917065950617421107" opt="false" xml:space="preserve"></pron>
+            <pos xml:id="_6917065950617423140" opt="false" xml:space="preserve"></pos>
+            <gloss xml:id="_6917065950617420250" xml:space="preserve">and aforth</gloss>
+            <usg xml:id="_6917065950617420180" opt="false" xml:space="preserve"></usg>
           </form>
-          <def xml:id="id33" opt="false"></def>
-          <etym xml:id="id34" opt="false"></etym>
-          <sense xml:id="id41" opt="false"></sense>
+          <def xml:id="_6917065950617421259" opt="false" xml:space="preserve"></def>
+          <etym xml:id="_6917065950617421095" opt="false" xml:space="preserve"></etym>
+          <sense xml:id="_6917065950617420189" opt="false" xml:space="preserve"></sense>
         </entry>
         <entry xml:id="_4f19082183" xml:lang="en" type="main">
           <form xml:id="id44" opt="false">

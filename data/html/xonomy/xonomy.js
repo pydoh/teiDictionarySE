@@ -1989,3 +1989,17 @@ Xonomy.goLeft=function(){
 	if($next.hasClass("rollouter")) Xonomy.setFocus($next.closest(".element").prop("id"), "rollouter");
 	if($next.hasClass("char")) Xonomy.setFocus($next.prop("id"), "char");
 };
+Xonomy.getXmlId=function getXmlId(htmlID, param) {
+      xmlid_port1.postMessage('xmlid');
+      xmlid_port1.onmessage = (event) => {
+        var xml_id = event.data;
+        var att=document.getElementById(htmlID);
+        var jsElement=Xonomy.harvestElement(att);
+        jsElement.value=xml_id;
+        Xonomy.replace(htmlID, jsElement);
+      }
+    }
+Xonomy.insertTwoAttributes=function insertTwoAttributes(htmlID, param) {
+  Xonomy.newAttribute(htmlID, {name: param.name1, value: param.value1});
+  Xonomy.newAttribute(htmlID, {name: param.name2, value: param.value2});
+};
