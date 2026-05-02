@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
+<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
+<TEI tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" xml:id="_6917065950617422348">
+  <teiHeader xml:id="_6917065950617422556"/>
+  <text xml:id="_6917065950617422958">
+    <front xml:id="_6917065950617423596"/>
+    <body xml:lang="" xml:id="_6917065950617420466">
+      <head xmlns="http://www.w3.org/1999/xhtml" xml:id="_6917065950617422277">Bb</head>
+      <div xml:id="_6917065950617420499" part="N" org="uniform" sample="complete">
+        <index xml:id="_6917065950617421489"/>
+        <div xml:id="_6917065950617422948" part="N" org="uniform" sample="complete">
+          <div xml:id="_6917065950617423539" part="N" org="uniform" sample="complete">
+            <cb xml:id="_6917065950617421161" n="1"/>
+            <entry xml:id="_6917065950617422669" type="main" xml:space="preserve">
+              <form xml:id="_6917065950617420960" opt="false" xml:space="preserve">
+                <orth xml:id="_6917065950617422267" opt="false" xml:space="preserve">bounce</orth>
+                <gloss xml:id="_6917065950617420385" xml:space="preserve"/>
+                <cit xml:id="_6917065950617422569" type="example" xml:space="preserve">
+                  <quote xml:id="_6917065950617421192" xml:space="preserve">bon-sebon-sebon-sebon (as in French)</quote>
+                  <bibl xml:id="_6917065950617421029" default="false" status="draft" xml:space="preserve"/>
+                </cit>
+              </form>
+            </entry>
+          </div>
+          <div xml:id="_6917065950617421174" part="N" org="uniform" sample="complete">
+            <cb xml:id="_6917065950617420429" n="2"/>
+          </div>
+          <pb xml:id="_6917065950617422827" n="1"/>
+        </div>
+        <div xml:id="_6917065950617421636" part="N" org="uniform" sample="complete">
+          <div xml:id="_6917065950617421002" part="N" org="uniform" sample="complete">
+            <cb xml:id="_6917065950617421286" n="1"/>
+          </div>
+          <div xml:id="_6917065950617423154" part="N" org="uniform" sample="complete">
+            <cb xml:id="_6917065950617420104" n="2"/>
+          </div>
+          <pb xml:id="_6917065950617422301" n="2"/>
+        </div>
+      </div>
+    </body>
+    <back xml:id="_6917065950617420052"/>
+  </text>
+</TEI>

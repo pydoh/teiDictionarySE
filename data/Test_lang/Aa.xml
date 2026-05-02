@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
+<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
+<TEI tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" xml:id="_6917065950617421975">
+  <teiHeader xml:id="_6917065950617421777">
+    <fileDesc xml:id="_6917065950617421593">
+      <titleStmt xml:id="_6917065950617421257">
+        <title xml:id="_6917065950617420572"/>
+      </titleStmt>
+      <publicationStmt xml:id="_6917065950617421209">
+        <publisher xml:id="_6917065950617419856"/>
+      </publicationStmt>
+      <sourceDesc xml:id="_6917065950617421398" default="false">
+        <bibl xml:id="_6917065950617423011" default="false" status="draft"/>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text xml:id="_6917065950617420822">
+    <front xml:id="_6917065950617420081"/>
+    <body xml:lang="" xml:id="_6917065950617421479">
+      <head xmlns="http://www.w3.org/1999/xhtml" xml:id="_6917065950617422529">Aa</head>
+      <div xml:id="_6917065950617422114" part="N" org="uniform" sample="complete">
+        <index xml:id="_6917065950617423159"/>
+        <entry xml:id="_6917065950617420568" xml:lang="en" type="main">
+          <form xml:id="_6917065950617420243" opt="false">
+            <orth xml:id="_6917065950617421645" opt="false">aardvark</orth>
+            <pron xml:id="_6917065950617421178" opt="false"/>
+            <pos xml:id="_6917065950617420689" opt="false"/>
+            <gloss xml:id="_6917065950617421768">one vark</gloss>
+            <usg xml:id="_6917065950617420046" opt="false"/>
+          </form>
+          <def xml:id="_6917065950617423607" opt="false"/>
+          <etym xml:id="_6917065950617421429" opt="false"/>
+          <sense xml:id="_6917065950617420537" opt="false"/>
+        </entry>
+        <entry xml:id="_6917065950617421067" xml:lang="en" type="main">
+          <form xml:id="_6917065950617420597" opt="false">
+            <orth xml:id="_6917065950617419971" opt="false">aardvarks</orth>
+            <pron xml:id="_6917065950617422262" opt="false"/>
+            <pos xml:id="_6917065950617421040" opt="false"/>
+            <gloss xml:id="_6917065950617420346">a bunch of varks</gloss>
+            <usg xml:id="_6917065950617420528" opt="false"/>
+          </form>
+          <def xml:id="_6917065950617422051" opt="false"/>
+          <etym xml:id="_6917065950617421870" opt="false"/>
+          <sense xml:id="_6917065950617422849" opt="false"/>
+        </entry>
+        <entry xml:id="_6917065950617421740" xml:lang="en" type="main">
+          <form xml:id="_6917065950617420295" opt="false">
+            <orth xml:id="_6917065950617421326" opt="false">aback</orth>
+            <pron xml:id="_6917065950617420934" opt="false"/>
+            <pos xml:id="_6917065950617420669" opt="false"/>
+            <gloss xml:id="_6917065950617423561">and aforth</gloss>
+            <usg xml:id="_6917065950617420710" opt="false"/>
+          </form>
+          <def xml:id="_6917065950617421492" opt="false"/>
+          <etym xml:id="_6917065950617422979" opt="false"/>
+          <sense xml:id="_6917065950617421974" opt="false"/>
+        </entry>
+        <entry xml:id="_6917065950617420833" xml:lang="en" type="main">
+          <form xml:id="_6917065950617419906" opt="false">
+            <orth xml:id="_6917065950617420228" opt="false">abacus</orth>
+            <pron xml:id="_6917065950617423046" opt="false"/>
+            <pos xml:id="_6917065950617421042" opt="false"/>
+            <gloss xml:id="_6917065950617421680">one cus</gloss>
+            <usg xml:id="_6917065950617420395" opt="false"/>
+          </form>
+          <def xml:id="_6917065950617423401" opt="false"/>
+          <etym xml:id="_6917065950617421539" opt="false"/>
+          <sense xml:id="_6917065950617423533" opt="false"/>
+        </entry>
+        <entry xml:id="_6917065950617420446" xml:lang="en" type="main" xml:space="preserve">
+          <form xml:id="_6917065950617420811" opt="false" xml:space="preserve">
+            <orth xml:id="_6917065950617419986" opt="false" xml:space="preserve">abacuses</orth>
+            <pron xml:id="_6917065950617419809" opt="false" xml:space="preserve"/>
+            <pos xml:id="_6917065950617420200" opt="false" xml:space="preserve"/>
+            <gloss xml:id="_6917065950617423001" xml:space="preserve">a bunch of cusses</gloss>
+            <usg xml:id="_6917065950617420632" opt="false" xml:space="preserve"/>
+          </form>
+          <def xml:id="_6917065950617422412" opt="false" xml:space="preserve"/>
+          <etym xml:id="_6917065950617420938" opt="false" xml:space="preserve"/>
+          <sense xml:id="_6917065950617420181" opt="false" xml:space="preserve"/>
+        </entry>
+      </div>
+    </body>
+    <back xml:id="_6917065950617421475"/>
+  </text>
+</TEI>

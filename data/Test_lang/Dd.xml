@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
+<!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
+<TEI xmlns="http://www.w3.org/1999/xhtml" tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" xml:id="_6917065950617421791">
+  <teiHeader xml:id="_6917065950617423047"/>
+  <text xml:id="_6917065950617421712">
+    <body xml:id="_6917065950617421285">
+      <head xml:id="_6917065950617421321"/>
+      <div xml:id="_6917065950617422417">
+        <div xml:id="_6917065950617421365">
+          <div xml:id="_6917065950617420222">
+            <cb xml:id="_6917065950617420896" n="1"/>
+          </div>
+          <div xml:id="_6917065950617420029">
+            <cb xml:id="_6917065950617420789" n="2"/>
+          </div>
+          <pb xml:id="_6917065950617423421" n="1"/>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

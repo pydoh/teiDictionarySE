@@ -1,0 +1,25 @@
+{
+    "name": "teiDictionary SE",
+    "version": "1.0.0",
+    "description": "TEI-P5 Dictionary Simple Edit",
+    "main": "src/index.cjs",
+    "exports": {
+        ".": "./src/index.cjs"
+    },
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "pydoh",
+    "license": "GPL-3.0-or-later",
+    "contributors": [],
+    "devDependencies": {
+        "electron": "^39.2.7"
+    },
+    "dependencies": {
+        "@theinternetfolks/snowflake": "^1.3.0",
+        "xml2js": "^0.6.2"
+    }
+}
