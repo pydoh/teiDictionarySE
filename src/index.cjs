@@ -13,7 +13,7 @@ const {
     } = require('electron')
 
 /**
-    To start convert package.json
+    Convert package.json
     "main": "src/index.cjs",
  */
 
