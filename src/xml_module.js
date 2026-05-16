@@ -1,5 +1,4 @@
 import xml2js from "xml2js";
-import path from 'path';
 
 // Application modules
 import { writeData } from './file_module.js';

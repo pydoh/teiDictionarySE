@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 // Node modules
-const path = require("path");
+const path = require('node:path');
 
 // Electron modules
 const {
@@ -18,7 +18,7 @@ const {
  */
 
 // Application modules
-const { readData, writeData, saveFile } = require('./file_module.js');
+const { loadFile, saveFile } = require('./file_module.js');
 const { createMain, createSecondary, promptModal } = require('./views/gui_module.cjs');
 const { getSnowflake, addHeader } = require('./text_module.js');
 const { parseXml, buildXml, newEntryXml, newPageXml, newFileXml, saveToFile } = require('./xml_module.js');
@@ -187,7 +187,7 @@ class createMenu {
               label: "Open",
               accelerator: "Ctrl+O",
               click: () => {
-                readData(default_path, prj_Name, mainWindow);
+                loadFile(default_path, prj_Name, mainWindow);
               },
               enabled: true
             },
