@@ -27,6 +27,7 @@ const { parseXml, buildXml, newEntryXml, newPageXml, newFileXml, saveToFile } = 
 //const userDocPath = app.getPath('documents');
 // const parentDirectoryPath = path.join(userDocPath, 'TEI_Dictionaries');
 //const default_path = parentDirectoryPath
+// Todo ### 5. **Hardcoded Project Path**
 const prj_Name = 'Test_lang';
 
 var default_path = path.join(__dirname.split( '/' ).slice( 0, -1 ).join( '/' ), 'data');
@@ -39,13 +40,19 @@ function getSavePorts(mainWindow) {
   const save_channel = new MessageChannelMain()
   const save_port1 = save_channel.port1;
   const save_port2 = save_channel.port2;
+//   Todo ### 8. **Deprecated or Misused IPC Pattern**
+//   Using `postMessage` with `MessageChannelMain` is low-level and error-prone.
   mainWindow.webContents.postMessage('save_port2', null, [save_port2]);
   save_port1.start();
+//   Todo ### 8. **Deprecated or Misused IPC Pattern**
+//   Using `postMessage` with `MessageChannelMain` is low-level and error-prone.
   save_port1.postMessage('xml_content');
 
   save_port1.on('message', (event) => {
     let xml_string = event.data;
     let filePath = '';
+//  Todo ### 6. **Missing Error Handling**
+//  ### No try/catch blocks around file operations (`loadFile`, `saveFile`, `parseXml`)
     parseXml(saveToFile, xml_string, default_path, prj_Name, filePath);
   })
 
@@ -60,11 +67,14 @@ function getXmlIdPorts(edit_port2, mainWindow) {
 
   xmlid_port2.on('message', (event) => {
     var xmlid = getSnowflake();
+//   Todo ### 8. **Deprecated or Misused IPC Pattern**
+//   Using `postMessage` with `MessageChannelMain` is low-level and error-prone.
     xmlid_port2.postMessage(xmlid);
   })
 
 };
 
+// Todo ### 3. **`getEntryPorts` Function Is Incomplete**
 function getEntryPorts() { // edit_port2, mainWindow
   const entry_channel = new MessageChannelMain()
   const entry_port1 = entry_channel.port1;
@@ -72,11 +82,15 @@ function getEntryPorts() { // edit_port2, mainWindow
   entry_port2.start();
   xml_string = newEntryXml();
 //   console.log(xml_string);
+//   Todo ### 8. **Deprecated or Misused IPC Pattern**
+//   Using `postMessage` with `MessageChannelMain` is low-level and error-prone.
 //   mainWindow.webContents.postMessage('entry_port2', null, [entry_port2]);
 //   const secondaryWindow = new createSecondary(edit_port2, xmlid_port1, mainWindow);
 
 //   entry_port2.on('message', (event) => {
 // //     var xmlid = getSnowflake();
+//   Todo ### 8. **Deprecated or Misused IPC Pattern**
+//   Using `postMessage` with `MessageChannelMain` is low-level and error-prone.
 //     entry_port2.postMessage(entry);
 //   })
 
@@ -93,6 +107,8 @@ function getFilenamePorts(mainWindow) {
 // 	    value:"example",
 // // 	    ok: "ok"
 // 	    }
+// ### 7. **Security: No Input Validation**
+// User-provided filenames (e.g., from `promptModal`) are used directly in file paths without sanitization
   const promptWindow = new promptModal(filename_port1, mainWindow);
 
   filename_port2.on('message', (event) => {
@@ -102,6 +118,8 @@ function getFilenamePorts(mainWindow) {
     filepath = path.join(prj_path, file_string); // not for saveToFile
     xml_string = newFileXml(filename);
 //     saveToFile(xml_string, default_path, prj_Name, file_string); // await to load
+//  Todo ### 6. **Missing Error Handling**
+//  ### No try/catch blocks around file operations (`loadFile`, `saveFile`, `parseXml`)
     saveFile(filepath, xml_string);
     mainWindow.loadFile(filepath); // await to load
   })
@@ -123,6 +141,7 @@ app.whenReady().then(async () => {
   const main_menu = Menu.buildFromTemplate(new createMenu(mainWindow));
   Menu.setApplicationMenu(main_menu);
 
+//   Todo ### 4. **Context Menu Not Properly Scoped**
   const context_menu = Menu.buildFromTemplate([
     {
       label: "New Entry",
@@ -168,6 +187,7 @@ app.whenReady().then(async () => {
 
 })
 
+// Todo ### 2. **`createMenu` Class Not Found in `require`**
 class createMenu {
   constructor(mainWindow) {
     const main_menu = [
@@ -187,6 +207,8 @@ class createMenu {
               label: "Open",
               accelerator: "Ctrl+O",
               click: () => {
+//              Todo ### 6. **Missing Error Handling**
+//              ### No try/catch blocks around file operations (`loadFile`, `saveFile`, `parseXml`)
                 loadFile(default_path, prj_Name, mainWindow);
               },
               enabled: true
