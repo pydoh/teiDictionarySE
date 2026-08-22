@@ -36,8 +36,6 @@ var prj_path = path.join(default_path, 'Test_lang');
 let mainWindow;
 
 function getSavePorts(mainWindow) {
-  let xml_string = event.data;
-  let filePath = '';
   const save_channel = new MessageChannelMain()
   const save_port1 = save_channel.port1;
   const save_port2 = save_channel.port2;
@@ -46,8 +44,8 @@ function getSavePorts(mainWindow) {
   save_port1.postMessage('xml_content');
 
   save_port1.on('message', (event) => {
-    xml_string = event.data;
-    filePath = '';
+    let xml_string = event.data;
+    let filePath = '';
     parseXml(saveToFile, xml_string, default_path, prj_Name, filePath);
   })
 

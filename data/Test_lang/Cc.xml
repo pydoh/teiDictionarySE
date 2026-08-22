@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="xsl/custom.xsl"?>
 <!DOCTYPE TEI SYSTEM "z-tei-dictionary.dtd">
-<TEI xmlns="http://www.w3.org/1999/xhtml" tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" xml:id="_6917065950617423085">
+<TEI tei="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace" xml:id="_6917065950617423085">
   <teiHeader xml:id="_6917065950617421904"/>
   <text xml:id="_6917065950617420966">
-    <body xml:id="_6917065950617420491">
+    <body xml:lang="" xml:id="_6917065950617420491">
       <head xml:id="_6917065950617420640"/>
-      <div xml:id="_6917065950617423069">
-        <div xml:id="_6917065950617423144">
-          <div xml:id="_6917065950617420346">
+      <div xml:id="_6917065950617423069" part="N" org="uniform" sample="complete">
+        <div xml:id="_6917065950617423144" part="N" org="uniform" sample="complete">
+          <div xml:id="_6917065950617420346" part="N" org="uniform" sample="complete">
             <cb xml:id="_6917065950617423511" n="1"/>
           </div>
-          <div xml:id="_6917065950617420128">
+          <div xml:id="_6917065950617420128" part="N" org="uniform" sample="complete">
             <cb xml:id="_6917065950617420952" n="2"/>
           </div>
           <pb xml:id="_6917065950617422520" n="1"/>
