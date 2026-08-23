@@ -14,6 +14,8 @@ ipcRenderer.on('save_port2', e => {
 });
 
 // -> Custom javascript --------------------------------------------------------------------------
+//### 6. **Commented-Out Code**
+//Several lines are commented out (e.g., `elemId` handling), suggesting incomplete or abandoned logic.
 //var elem = '';
 //var elemid = '';
 
@@ -29,6 +31,8 @@ function getEditPorts() {
   return edit_port1
 };
 
+//### 7. **No Cleanup of Event Listeners**
+//Ports and event listeners are not cleaned up when no longer needed, risking memory leaks.
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", (event) => {
   // EventListener for element click
@@ -41,6 +45,9 @@ function elemClick(e) {
 //  elemId = e.target.closest('entry').id // doesn't work with 'xml:id'
   let element = e.target.closest('entry'); // because it's an 'xml:id'
 //  elemId = element.getAttribute('xml:id'); // does seem to work
+//  ### 5. **Redundant Port Creation**
+//  `getEditPorts()` is called on every click, creating a new `MessageChannel` each time.
+//  ensure old ports are closed
   // Get new edit_ports for every new instance of window
   let edit_port1 = getEditPorts();
   // Send the message on edit_port1
@@ -51,10 +58,16 @@ function elemClick(e) {
 function editMessage(messageEvent) {
 //  document.getElementById(elemId).replaceWith(messageEvent.data); // doesn't work with 'xml:id'
   element.replaceWith(messageEvent.data); // does seem to work
+//  ### 2. **Missing Error Handling**
+//  No try/catch blocks around DOM operations or message handling.
   let xml_content = document.getElementById('tei_wrapper').innerHTML;
   xml_content = xml_content.replaceAll('&lt;', '<'); // &lt; = <
   xml_content = xml_content.replaceAll('&gt;', '>'); // &gt; = >
+//  ### 3. **Inefficient DOM Updates**
+//  After replacing an element, the entire `tei_wrapper` innerHTML is re-parsed and re-set due to `&lt;`/`&gt;` replacement.
   document.getElementById('tei_wrapper').innerHTML = xml_content;
+//  ### 4. **Security Risk: InnerHTML with Untrusted Data**
+//  Using `innerHTML = xml_content` after string replacements risks XSS if the XML contains script tags or malicious content.
 }
 
 // -> Custom javascript --------------------------------------------------------------------------
